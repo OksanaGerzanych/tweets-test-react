@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchTweets } from './operations'
+import { fetchTweets, editTweets } from './operations';
 
 export const tweetsSlice = createSlice({
     name: 'tweets',
   initialState: {
     items: [],
+    isLoading: false,
     error: null,
   }, extraReducers:{
     [fetchTweets.fulfilled](state, action){
@@ -13,7 +14,19 @@ export const tweetsSlice = createSlice({
     },
     [fetchTweets.rejected](state, action){
         state.error = action.payload;
-      },
+    },
+    [editTweets.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.items = state.items.map(item => {
+        if (item.id === action.payload.id) {
+          return item.followers = action.payload.followers;
+        }
+      })
+    },
+    [editTweets.rejected](state, action){
+        state.error = action.payload;
+      }
   }
 }
 
