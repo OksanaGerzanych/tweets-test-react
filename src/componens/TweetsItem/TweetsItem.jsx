@@ -1,11 +1,24 @@
-import React from 'react';
-import { useDispatch } from 'react-redux/es/exports';
-import { editTweets } from '../../redux/operations';
-import { Avatar, ButtonFollow, ButtonText, Followers, Item, Tweets } from './TweetsItem.styled';
+import { useDispatch } from "react-redux/es/exports";
+import { editTweets } from "../../redux/operations";
+import {
+  Avatar,
+  ButtonFollow,
+  ButtonText,
+  Followers,
+  Item,
+  Tweets,
+} from "./TweetsItem.styled";
 
-export const TweetsItem = ({id, user, tweets, followers, avatar,  isFollowing,}) => {
-    const dispatch = useDispatch();
-const handleUpdate = () => {
+export const TweetsItem = ({
+  id,
+  user,
+  tweets,
+  followers,
+  avatar,
+  isFollowing,
+}) => {
+  const dispatch = useDispatch();
+  const handleUpdate = () => {
     dispatch(
       editTweets(
         isFollowing
@@ -15,15 +28,22 @@ const handleUpdate = () => {
     );
   };
 
+  return (
+    <Item>
+      
+      <Avatar src={avatar} alt={user} />
+      <Tweets>{tweets} tweets</Tweets>
+      <Followers>{followers.toLocaleString('en-US')} followers</Followers>
 
-    return (
-        <Item>
-            {/* <Info> </Info> */}
-            <Avatar src={avatar} alt={user}/>
-            <Tweets>{tweets} tweets</Tweets>
-                <Followers>{followers} followers</Followers>
-           
-            <ButtonFollow type='button' onClick={handleUpdate}> {isFollowing ? <ButtonText>following</ButtonText> : <ButtonText>follow</ButtonText>}</ButtonFollow>
-        </Item>
-    )
-}
+      {isFollowing ? (
+        <ButtonFollow type="button" onClick={handleUpdate}>
+          <ButtonText>following</ButtonText>
+        </ButtonFollow>
+      ) : (
+       <ButtonFollow type="button" onClick={handleUpdate}>
+          <ButtonText>follow</ButtonText>
+        </ButtonFollow>
+      )}
+    </Item>
+  );
+};
