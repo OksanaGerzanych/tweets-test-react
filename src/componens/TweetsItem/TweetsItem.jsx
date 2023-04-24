@@ -1,3 +1,6 @@
+import logo from "../../images/logo.png"
+import tweets from "../../images/tweets.png"
+
 import { useDispatch } from "react-redux/es/exports";
 import { editTweets } from "../../redux/operations";
 import {
@@ -24,7 +27,10 @@ export const TweetsItem = ({
 
   return (
     <Item>
-      
+      <picture> <source srcSet={`${logo}`} />
+                <img src={logo} alt="logo" /></picture>
+      <picture> <source srcSet={`${tweets}`} />
+                <img src={tweets} alt="tweets" /></picture>
       <Avatar src={avatar} alt={user} />
       <Tweets>{tweets} tweets</Tweets>
       <Followers>{followers.toLocaleString('en-US')} followers</Followers>
