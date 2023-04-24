@@ -16,7 +16,7 @@ border-radius: 20px;
     linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
  
   background-position: left 150px top 178px, left 20px top 20px,
-    left 0 top 214px, left 36px top 28px, top 0 left 0; */
+    left 0 top 214px, left 36px top 28px, top 0 left 0; 
 `
 
 export const Avatar = styled.img`

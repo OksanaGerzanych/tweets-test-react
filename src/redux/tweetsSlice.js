@@ -7,7 +7,11 @@ export const tweetsSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
-  }, extraReducers:{
+  }, 
+  extraReducers: {
+    [fetchTweets.pending](state) {
+      state.isLoading =  true;
+    },
     [fetchTweets.fulfilled](state, action) {
       state.isLoading =  false;
       state.error = null;
@@ -24,15 +28,15 @@ export const tweetsSlice = createSlice({
       state.isLoading = false;
       state.error = null;
       state.items = state.items.map(item => {
-        if (user.id === action.payload.id) {
-            return {
-              ...item,
-              followers: action.payload.followers,
-              isFollowing: action.payload.isFollowing,
-            };
+        if (item.id !== action.payload.id) {
+          return {
+           ...item,
+        followers: action.payload.followers,
+        isFollowing: action.payload.isFollowing,
+          }
         }
         return item;
-      })
+      });
     },
       [editTweets.rejected](state, action) {
       state.isLoading = false;
