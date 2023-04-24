@@ -27,9 +27,9 @@ export const tweetsSlice = createSlice({
     [editTweets.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
-      state.items = state.items.forEach(item => {
+      state.items = state.items.map(item => {
         if (item.id !== action.payload.id) {
-          return
+          return item
         }
         item.followers = action.payload.followers;
         item.isFollowing = action.payload.isFollowing;
@@ -41,7 +41,5 @@ export const tweetsSlice = createSlice({
       }
   }
 }
-
 )
-
 export const tweetsReducer = tweetsSlice.reducer;

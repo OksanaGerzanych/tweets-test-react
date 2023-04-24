@@ -8,13 +8,10 @@ height: 460px;
 background-repeat: no-repeat;
 box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23); 
 border-radius: 20px;
- background-image: url('../../images/ellipse.png'),
-     url('../../images/rectangle.png'),
-   
-    linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
+ background:   
+linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
  
-  background-position: left 150px top 178px, 
-    left 0 top 214px,  top 0 left 0; 
+ 
 `
 
 export const Avatar = styled.img`

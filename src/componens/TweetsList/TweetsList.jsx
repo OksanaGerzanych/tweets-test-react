@@ -2,7 +2,7 @@ import { TweetsItem } from "../TweetsItem/TweetsItem"
 import { useSelector } from "react-redux/es/exports";
 import { useState } from "react";
 import { selectTweets } from "../../redux/selectors";
-import { List } from "./TweetsList.styled";
+import { ButtonLoadMore, List } from "./TweetsList.styled";
 
 export const TweetsList = () => {
 const users = useSelector(selectTweets);
@@ -23,7 +23,7 @@ const users = useSelector(selectTweets);
                     <TweetsItem key={id} {...restProps} />
                 )}
         </List>
-        {isHidden ? null : (<button type="button" onClick={handleClick} >Load More</button>)}
+        {isHidden ? null : (<ButtonLoadMore type="button" onClick={handleClick} >Load More</ButtonLoadMore>)}
         </div>
     )
 }
