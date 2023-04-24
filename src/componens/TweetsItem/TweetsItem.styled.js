@@ -5,18 +5,16 @@ position: relative;
 list-style: none;
 width: 380px;
 height: 460px;
-/* background-image: 
-url("logo.png"), linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%); */
- background-repeat: no-repeat;
+background-repeat: no-repeat;
 box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23); 
 border-radius: 20px;
  background-image: url('../../images/ellipse.png'),
-    url('../../images/logo.png'), url('../../images/rectangle.png'),
-    url('../../images/tweets.png'),
+     url('../../images/rectangle.png'),
+   
     linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
  
-  background-position: left 150px top 178px, left 20px top 20px,
-    left 0 top 214px, left 36px top 28px, top 0 left 0; 
+  background-position: left 150px top 178px, 
+    left 0 top 214px,  top 0 left 0; 
 `
 
 export const Avatar = styled.img`
@@ -95,4 +93,44 @@ color: #373737;
 flex: none;
 order: 0;
 flex-grow: 0;
+`
+export const LogoPicture = styled.picture`
+position: absolute;
+width: 76px;
+height: 22px;
+left: 20px;
+top: 20px;
+`
+export const TweetsPicture= styled.picture`
+position: absolute;
+width: 308px;
+height: 168px;
+left: 36px;
+top: 28px;
+
+`
+export const Line = styled.div`
+position: absolute;
+width: 380px;
+height: 8px;
+left: 0px;
+top: 214px;
+
+background: #EBD8FF;
+box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06), inset 0px -1.71846px 3.43693px #AE7BE3, inset 0px 3.43693px 2.5777px #FBF8FF;
+
+`
+export const ElipseAvatar = styled.div`
+position: absolute;
+width: 80px;
+height: 80px;
+left: 155px;
+top: 178px;
+
+background: #EBD8FF;
+box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), 
+inset 0px -2.19582px 4.39163px #AE7BE3, 
+inset 0px 4.39163px 3.29372px #FBF8FF;
+border-radius: 50%;
+
 `
