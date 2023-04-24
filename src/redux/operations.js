@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://642bcd3e208dfe25471fe088.mockapi.io/';
+axios.defaults.baseURL = 'https://642bcd3e208dfe25471fe088.mockapi.io';
 
 export const fetchTweets = createAsyncThunk(
   'users/fetchAll',
@@ -17,11 +17,11 @@ export const fetchTweets = createAsyncThunk(
 
 export const editTweets = createAsyncThunk(
     "users/editTweets",
-    async (users, thunkAPI) => {
+    async (user, thunkAPI) => {
         try {
-            const response = await axios.put(`/users/${users.id}`, {
-              followers: users.isFollowing ? users.followers - 1 : users.followers + 1,
-              isFollowing: !users.isFollowing
+            const response = await axios.put(`/users/${user.id}`, {
+              followers: user.isFollowing ? user.followers - 1 : user.followers + 1,
+              isFollowing: !user.isFollowing
             });
             return response.data;
         }
