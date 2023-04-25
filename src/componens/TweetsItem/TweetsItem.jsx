@@ -9,7 +9,6 @@ import {
   ButtonText,
   ElipseAvatar,
   Followers,
-  Item,
   Line,
   LogoPicture,
   Tweets,
@@ -26,11 +25,17 @@ export const TweetsItem = ({
 }) => {
   const dispatch = useDispatch();
   const handleUpdate = () => {
-    dispatch(editTweets({ id, isFollowing, followers }));
+    dispatch(
+      editTweets(
+        isFollowing
+          ? { id, followers: followers - 1, isFollowing: false }
+          : { id, followers: followers + 1, isFollowing: true }
+      )
+    );
   };
-
+  
   return (
-    <Item>
+    <div>
       <LogoPicture>
         {" "}
         <source srcSet={`${logo}`} />
@@ -53,10 +58,11 @@ export const TweetsItem = ({
           <ButtonText>following</ButtonText>
         </ButtonFollow>
       ) : (
-        <ButtonFollow isFollow={isFollowing} type="button" onClick={handleUpdate}>
+        <ButtonFollow  isFollow={isFollowing}type="button" onClick={handleUpdate}>
           <ButtonText>follow</ButtonText>
         </ButtonFollow>
       )}
-    </Item>
+    </div>
   );
 };
+

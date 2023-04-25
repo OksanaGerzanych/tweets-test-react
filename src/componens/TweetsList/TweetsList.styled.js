@@ -7,6 +7,6 @@ gap: 30px;
 text-align: center;
 `
 export const ButtonLoadMore = styled.button`
-display: flex;
-justify-content: center;
+margin-left: auto;
+margin-right: auto;
 `

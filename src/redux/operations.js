@@ -17,11 +17,11 @@ export const fetchTweets = createAsyncThunk(
 
 export const editTweets = createAsyncThunk(
     "users/editTweets",
-    async (user, thunkAPI) => {
+    async ({ id, isFollowing, followers }, thunkAPI) => {
         try {
-            const response = await axios.put(`/users/${user.id}`, {
-              followers: user.isFollowing ? user.followers - 1 : user.followers + 1,
-              isFollowing: !user.isFollowing
+            const response = await axios.put(`/users/${id}`, {
+              followers,
+              isFollowing
             });
             return response.data;
         }

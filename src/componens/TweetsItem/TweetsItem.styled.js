@@ -70,13 +70,12 @@ height: 50px;
 left: 92px;
 top: 374px;
 cursor: pointer;
-background: #EBD8FF;
+background: ${props => {
+       return props.isFollow ? '#5CD3A8' : '#EBD8FF'   
+    }};;
 box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
 border-radius: 10.3108px;
-&&.active {
-  /* composes: btn; */
-  background-color: #5cd3a8;
-}
+
 `
 
 export const ButtonText = styled.span`
