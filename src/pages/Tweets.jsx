@@ -16,11 +16,11 @@ export default function Tweets() {
     
     
     return (
-        <div>
+        <>
             <Link to="/"><button type="click">Back</button></Link>
             <Filter />
             <TweetsList />
             
-        </div>
+        </>
     )
 }

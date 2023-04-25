@@ -25,8 +25,8 @@ export const TweetsList = () => {
                   <TweetsItem id={id} {...restProps} />
             </Item>)
                 )}
-        </List>
+        </List> 
         {isHidden ? null : <ButtonLoadMore type="button" onClick={handleClick} >Load More</ButtonLoadMore>}
-        </>
+       </>
     )
 }
