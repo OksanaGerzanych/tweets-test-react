@@ -4,6 +4,7 @@ import { fetchTweets } from "../redux/operations"
 import { useDispatch } from "react-redux/es/exports";
 import { Link } from 'react-router-dom';
 import { Filter } from "../componens/Filter/Filter";
+import { ButtonBack } from "../componens/Filter/Filter.styled";
 
 
 export default function Tweets() {
@@ -17,7 +18,7 @@ export default function Tweets() {
     
     return (
         <>
-            <Link to="/"><button type="click">Back</button></Link>
+            <Link to="/"><ButtonBack type="button">Back</ButtonBack></Link>
             <Filter />
             <TweetsList />
             

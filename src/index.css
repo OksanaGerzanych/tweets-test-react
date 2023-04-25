@@ -24,7 +24,7 @@ a {
 
 
 body {
-  margin: auto;
+  /* margin: auto; */
   display: flex;
  justify-content: center;
   
