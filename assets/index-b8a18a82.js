@@ -101,7 +101,7 @@ Error generating stack: `+i.message+`
   margin: auto;
   background:linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
 
-`,$1=()=>ue.jsxs(N1,{children:[ue.jsx(R1,{}),ue.jsx(em,{to:"/"})]}),A1=()=>ue.jsxs("div",{children:[ue.jsx($1,{}),ue.jsx(C.Suspense,{fallback:null,children:ue.jsx(wg,{})})]}),T1=C.lazy(()=>bh(()=>import("./Home-1b1eb895.js"),[])),L1=C.lazy(()=>bh(()=>import("./Tweets-d2c2ee63.js"),[])),j1=()=>ue.jsx(Eg,{children:ue.jsxs(li,{path:"/",element:ue.jsx(A1,{}),children:[ue.jsx(li,{index:!0,element:ue.jsx(T1,{})}),ue.jsx(li,{path:"/tweets",element:ue.jsx(L1,{})})]})});var Wa={},I1={get exports(){return Wa},set exports(e){Wa=e}},mm={};/**
+`,$1=()=>ue.jsxs(N1,{children:[ue.jsx(R1,{}),ue.jsx(em,{to:"/"})]}),A1=()=>ue.jsxs("div",{children:[ue.jsx($1,{}),ue.jsx(C.Suspense,{fallback:null,children:ue.jsx(wg,{})})]}),T1=C.lazy(()=>bh(()=>import("./Home-21cbe544.js"),[])),L1=C.lazy(()=>bh(()=>import("./Tweets-441a173b.js"),[])),j1=()=>ue.jsx(Eg,{children:ue.jsxs(li,{path:"/",element:ue.jsx(A1,{}),children:[ue.jsx(li,{index:!0,element:ue.jsx(T1,{})}),ue.jsx(li,{path:"/tweets",element:ue.jsx(L1,{})})]})});var Wa={},I1={get exports(){return Wa},set exports(e){Wa=e}},mm={};/**
  * @license React
  * use-sync-external-store-shim.production.min.js
  *
