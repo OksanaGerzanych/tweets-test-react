@@ -30,12 +30,6 @@ export const TweetsItem = ({
     );
   };
 
-// isFollowing
-//           ? { id, followers: followers - 1, isFollowing: false }
-//           : { id, followers: followers + 1, isFollowing: true }
-
-
-
   return (
     <div>
       <LogoPicture>
