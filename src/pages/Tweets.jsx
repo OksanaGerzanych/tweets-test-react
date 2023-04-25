@@ -14,7 +14,7 @@ export default function Tweets() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const location = useLocation();
-   const goBack = location.state?.from ?? "/tweets";
+   const goBack = location.state?.from ?? "/";
 
 
   useEffect(() => {
