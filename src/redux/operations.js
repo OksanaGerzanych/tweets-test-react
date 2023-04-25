@@ -20,8 +20,8 @@ export const editTweets = createAsyncThunk(
     async ({ id, isFollowing, followers }, thunkAPI) => {
         try {
             const response = await axios.put(`/users/${id}`, {
-              followers,
-              isFollowing
+             followers: isFollowing ? followers -1 : followers +1,
+                isFollowing: !isFollowing
             });
             return response.data;
         }

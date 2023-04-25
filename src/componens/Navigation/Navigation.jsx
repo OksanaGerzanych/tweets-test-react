@@ -1,4 +1,3 @@
-
 import { LinkPage, Nav } from "./Navigation.styled";
 
 export const Navigation = () => {

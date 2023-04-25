@@ -26,14 +26,16 @@ export const TweetsItem = ({
   const dispatch = useDispatch();
   const handleUpdate = () => {
     dispatch(
-      editTweets(
-        isFollowing
-          ? { id, followers: followers - 1, isFollowing: false }
-          : { id, followers: followers + 1, isFollowing: true }
-      )
+      editTweets({id, followers, isFollowing})
     );
   };
-  
+
+// isFollowing
+//           ? { id, followers: followers - 1, isFollowing: false }
+//           : { id, followers: followers + 1, isFollowing: true }
+
+
+
   return (
     <div>
       <LogoPicture>
@@ -54,15 +56,22 @@ export const TweetsItem = ({
       <Followers>{followers.toLocaleString("en-US")} followers</Followers>
 
       {isFollowing ? (
-        <ButtonFollow isFollow={isFollowing} type="button" onClick={handleUpdate}>
+        <ButtonFollow
+          isFollow={isFollowing}
+          type="button"
+          onClick={handleUpdate}
+        >
           <ButtonText>following</ButtonText>
         </ButtonFollow>
       ) : (
-        <ButtonFollow  isFollow={isFollowing}type="button" onClick={handleUpdate}>
+        <ButtonFollow
+          isFollow={isFollowing}
+          type="button"
+          onClick={handleUpdate}
+        >
           <ButtonText>follow</ButtonText>
         </ButtonFollow>
       )}
     </div>
   );
 };
-
