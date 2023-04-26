@@ -1,7 +1,8 @@
 Tweets-App
 Preview
-![image](https://user-images.githubusercontent.com/109728377/234510940-21d487f4-0dac-4b98-8b8c-4fdafe2063bf.png)
-![image](https://user-images.githubusercontent.com/109728377/234511450-979c8084-76fa-4500-9b74-2675593cab1e.png)
+![Tweets](https://user-images.githubusercontent.com/109728377/234537041-d55d663b-cfae-4e3d-a184-89b13507a913.jpg)
+![Tweets1](https://user-images.githubusercontent.com/109728377/234537117-51b450f6-1f88-4327-84fb-7e6ab59b4f34.jpg)
+
 
 The project was created using the Vite bundler.
 
